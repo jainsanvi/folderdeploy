@@ -10,4 +10,6 @@ router.get("/",(req,res) =>{
     res.send("Success")
 })
 
+app.use("/.netlify/functions/index", router);
+
 module.exports.handler = serverless(app);
